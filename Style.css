@@ -272,15 +272,18 @@ footer {
     object-fit: contain;
 }
 }
-#gallery .image-container {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 25px !important;
-    flex-wrap: nowrap !important;
-    text-align: center;
-}
+#gallery .learning-journey-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between the stacked items */
+  }
+
+  /* Ensure images scale down cleanly to fit the screen width */
+  .learning-journey-container img {
+    max-width: 100%;
+    height: auto;
+  }
 
 #gallery .image-card {
     width: 220px !important;
