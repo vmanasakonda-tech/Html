@@ -18,6 +18,10 @@ header h1 {
     margin-bottom: 10px;
 }
 
+header p {
+    color: white;
+}
+
 nav {
     background-color: white;
     text-align: center;
@@ -30,6 +34,10 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     margin: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 section {
@@ -60,7 +68,12 @@ section {
     font-family: Georgia, serif;
 }
 
-.hero-text h2,
+.hero-text h2{
+    
+    color: #6f4e37;
+    font-family: Georgia, serif;
+
+}
 .hero-text h3 {
     color: #6f4e37;
     font-family: Georgia, serif;
@@ -79,6 +92,7 @@ section {
     border: 5px solid white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
 section h2 {
     color: #6f4e37;
     font-family: Georgia, serif;
@@ -90,8 +104,43 @@ p, li, dd {
     line-height: 1.6;
 }
 
+/* Gallery */
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    text-align: center;
+    flex-wrap: wrap;
+}
 
+.image-card,
+.github-box {
+    width: 220px;
+    text-align: center;
+}
 
+.image-card img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.github-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.github-img:hover {
+    transform: scale(1.08);
+}
+
+/* Skills section */
 .info-box {
     display: flex;
     gap: 30px;
@@ -136,6 +185,7 @@ dd {
     margin-bottom: 14px;
 }
 
+/* Experience */
 .experience-section {
     box-shadow: none;
     background-color: transparent;
@@ -171,7 +221,7 @@ dd {
 }
 
 .icon {
-    background-color: #eadfD3;
+    background-color: #eadfd3;
     color: #6f4e37;
     width: 55px;
     height: 55px;
@@ -183,6 +233,7 @@ dd {
     flex-shrink: 0;
 }
 
+/* Bottom section */
 .bottom-section {
     width: 85%;
     margin: 30px auto;
@@ -213,6 +264,11 @@ dd {
     font-size: 18px;
 }
 
+.github-btn {
+    color: #6f4e37;
+}
+
+/* Footer */
 footer {
     background-color: #6f4e37;
     color: white;
@@ -220,6 +276,11 @@ footer {
     padding: 18px;
 }
 
+footer p {
+    color: white;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
     nav a {
         display: block;
@@ -231,8 +292,29 @@ footer {
         padding: 20px;
     }
 
-    .hero h1 {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text h1 {
         font-size: 32px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        margin-top: 20px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .info-box,
@@ -246,68 +328,13 @@ footer {
         border-bottom: 1px solid #d6c3b3;
     }
 
+    .column:last-child {
+        border-bottom: none;
+    }
+
     .experience-card {
         flex-direction: column;
         text-align: center;
         align-items: center;
     }
-
-.image-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 25px;
-    text-align: center;
-    flex-wrap: nowrap;
-}
-.image-card {
-    width: 220px;
-    text-align: center;
-}
-
-.github-img {
-    width: 150px !important;
-    height: 150px !important;
-    object-fit: contain;
-}
-}
-#gallery .learning-journey-container { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Adds space between the stacked items */
-  }
-
-  /* Ensure images scale down cleanly to fit the screen width */
-  .learning-journey-container img {
-    max-width: 100%;
-    height: auto;
-  }
-
-#gallery .image-card {
-    width: 220px !important;
-}
-
-#gallery .image-card img {
-    width: 220px !important;
-    height: 150px !important;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-#gallery .github-img {
-    width: 120px !important;
-    height: 120px !important;
-    object-fit: contain;
-    margin-top: 15px;
-}
-.hero {
-    flex-direction: column;
-    text-align: center;
-}
-
-.hero-text,
-.hero-image {
-    width: 100%;
 }
